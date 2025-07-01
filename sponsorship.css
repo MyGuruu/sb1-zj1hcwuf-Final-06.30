@@ -1,0 +1,1466 @@
+/* Sponsorship Page Specific Styles */
+
+/* Sponsorship Hero */
+.sponsorship-hero {
+  min-height: 90vh;
+  position: relative;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+  background: linear-gradient(135deg, var(--navy) 0%, var(--primary-blue) 100%);
+}
+
+.sponsorship-hero .hero-background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: url('/Golf Cart Lineup.jpg') center/cover no-repeat;
+  z-index: 1;
+  opacity: 0.3;
+}
+
+.sponsorship-hero .hero-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(135deg, rgba(15, 23, 42, 0.85), rgba(37, 99, 235, 0.75));
+  z-index: 2;
+}
+
+.sponsorship-hero .floating-elements {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 3;
+  pointer-events: none;
+}
+
+.sponsorship-hero .floating-circle {
+  position: absolute;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(245, 158, 11, 0.1) 0%, rgba(245, 158, 11, 0.03) 60%, transparent 100%);
+  backdrop-filter: blur(5px);
+  animation: float 8s ease-in-out infinite;
+}
+
+.sponsorship-hero .circle-1 {
+  width: 120px;
+  height: 120px;
+  top: 15%;
+  right: 10%;
+  animation-delay: 0s;
+}
+
+.sponsorship-hero .circle-2 {
+  width: 80px;
+  height: 80px;
+  top: 60%;
+  right: 20%;
+  animation-delay: 3s;
+}
+
+.sponsorship-hero .circle-3 {
+  width: 100px;
+  height: 100px;
+  bottom: 20%;
+  left: 15%;
+  animation-delay: 1.5s;
+}
+
+.sponsorship-hero .hero-container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 var(--space-lg);
+  position: relative;
+  z-index: 10;
+}
+
+.sponsorship-hero .hero-content {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: auto auto;
+  gap: var(--space-xl);
+  padding-top: 120px;
+  padding-bottom: var(--space-2xl);
+  min-height: 80vh;
+}
+
+.sponsorship-hero .hero-title {
+  font-family: var(--font-display);
+  font-size: clamp(2.5rem, 5vw, 4.5rem);
+  font-weight: 700;
+  line-height: 1.1;
+  color: var(--white);
+  margin-bottom: var(--space-lg);
+  animation: fadeInUp 0.8s ease-out 0.4s both;
+  grid-column: 2;
+  grid-row: 1;
+  text-align: right;
+}
+
+.sponsorship-hero .title-line {
+  display: block;
+  margin-bottom: var(--space-xs);
+}
+
+.title-accent {
+  background: linear-gradient(135deg, var(--accent-gold), var(--accent-gold-light));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.sponsorship-hero .hero-subtitle {
+  font-size: 1.375rem;
+  line-height: 1.6;
+  color: rgba(255, 255, 255, 0.9);
+  margin-bottom: var(--space-2xl);
+  max-width: 700px;
+  animation: fadeInUp 0.8s ease-out 0.6s both;
+  grid-column: 1;
+  grid-row: 2;
+  align-self: center;
+}
+
+.hero-stats {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  gap: var(--space-lg);
+  animation: fadeInUp 0.8s ease-out 0.8s both;
+  grid-column: 2;
+  grid-row: 2;
+  align-self: flex-end;
+}
+
+.stat-item {
+  text-align: center;
+}
+
+.stat-number {
+  display: block;
+  font-family: var(--font-display);
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: var(--accent-gold);
+  line-height: 1;
+  margin-bottom: var(--space-xs);
+}
+
+.stat-label {
+  font-size: 0.875rem;
+  color: rgba(255, 255, 255, 0.8);
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.stat-divider {
+  width: 1px;
+  height: 40px;
+  background: rgba(255, 255, 255, 0.3);
+}
+
+/* Premium Sponsorships */
+.premium-sponsorships {
+  background: var(--gray-50);
+  padding: var(--space-3xl) 0;
+}
+
+/* Sponsorship Card - New Accordion Style */
+.sponsorship-card {
+  background: var(--white);
+  border-radius: var(--radius-xl);
+  box-shadow: var(--shadow-lg);
+  overflow: hidden;
+  margin-bottom: var(--space-xl);
+  border: 2px solid transparent;
+  transition: all 0.3s ease;
+}
+
+.sponsorship-card:hover {
+  box-shadow: var(--shadow-xl);
+}
+
+/* Card colors */
+.sponsorship-card.legacy {
+  border-color: var(--accent-gold);
+}
+
+.sponsorship-card.master {
+  border-color: var(--primary-blue);
+}
+
+.sponsorship-card.pin-flag {
+  border-color: var(--success);
+}
+
+.sponsorship-card.guiding-mentor {
+  border-color: var(--warning);
+}
+
+.sponsorship-card.hole-in-one {
+  border-color: var(--error);
+}
+
+.sponsorship-card.adult-beverage {
+  border-color: #8b5cf6;
+}
+
+.sponsorship-card.tee {
+  border-color: #059669;
+}
+
+.sponsorship-card.driving-range {
+  border-color: #dc2626;
+}
+
+/* Card Header */
+.card-header {
+  padding: var(--space-lg);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
+  position: relative;
+}
+
+.card-header::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+}
+
+.sponsorship-card.legacy .card-header::before {
+  background: var(--gradient-gold);
+}
+
+.sponsorship-card.master .card-header::before {
+  background: var(--gradient-primary);
+}
+
+.sponsorship-card.pin-flag .card-header::before {
+  background: linear-gradient(90deg, var(--success), var(--accent-gold));
+}
+
+.sponsorship-card.guiding-mentor .card-header::before {
+  background: linear-gradient(90deg, var(--warning), var(--accent-gold));
+}
+
+.sponsorship-card.hole-in-one .card-header::before {
+  background: linear-gradient(90deg, var(--error), var(--accent-gold));
+}
+
+.sponsorship-card.adult-beverage .card-header::before {
+  background: linear-gradient(90deg, #8b5cf6, var(--accent-gold));
+}
+
+.sponsorship-card.tee .card-header::before {
+  background: linear-gradient(90deg, #059669, var(--accent-gold));
+}
+
+.sponsorship-card.driving-range .card-header::before {
+  background: linear-gradient(90deg, #dc2626, var(--accent-gold));
+}
+
+.header-left {
+  display: flex;
+  align-items: center;
+  gap: var(--space-lg);
+}
+
+.header-icon {
+  font-size: 2rem;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--white);
+  flex-shrink: 0;
+}
+
+.sponsorship-card.legacy .header-icon {
+  background: var(--accent-gold);
+  box-shadow: 0 4px 15px rgba(245, 158, 11, 0.3);
+}
+
+.sponsorship-card.master .header-icon {
+  background: var(--primary-blue);
+  box-shadow: 0 4px 15px rgba(37, 99, 235, 0.3);
+}
+
+.sponsorship-card.pin-flag .header-icon {
+  background: var(--success);
+  box-shadow: 0 4px 15px rgba(16, 185, 129, 0.3);
+}
+
+.sponsorship-card.guiding-mentor .header-icon {
+  background: var(--warning);
+  box-shadow: 0 4px 15px rgba(245, 158, 11, 0.3);
+}
+
+.sponsorship-card.hole-in-one .header-icon {
+  background: var(--error);
+  box-shadow: 0 4px 15px rgba(239, 68, 68, 0.3);
+}
+
+.sponsorship-card.adult-beverage .header-icon {
+  background: #8b5cf6;
+  box-shadow: 0 4px 15px rgba(139, 92, 246, 0.3);
+}
+
+.sponsorship-card.tee .header-icon {
+  background: #059669;
+  box-shadow: 0 4px 15px rgba(5, 150, 105, 0.3);
+}
+
+.sponsorship-card.driving-range .header-icon {
+  background: #dc2626;
+  box-shadow: 0 4px 15px rgba(220, 38, 38, 0.3);
+}
+
+.header-info {
+  flex: 1;
+}
+
+.header-info h3 {
+  color: var(--navy);
+  margin: 0 0 var(--space-xs) 0;
+  font-size: 1.5rem;
+  font-weight: 700;
+}
+
+.header-description {
+  color: var(--gray-600);
+  margin: 0;
+  font-size: 1rem;
+  line-height: 1.5;
+}
+
+.header-right {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: var(--space-sm);
+}
+
+.header-price {
+  font-family: var(--font-display);
+  font-size: 2rem;
+  font-weight: 700;
+  line-height: 1;
+}
+
+.sponsorship-card.legacy .header-price {
+  color: var(--accent-gold);
+}
+
+.sponsorship-card.master .header-price {
+  color: var(--primary-blue);
+}
+
+.sponsorship-card.pin-flag .header-price {
+  color: var(--success);
+}
+
+.sponsorship-card.guiding-mentor .header-price {
+  color: var(--warning);
+}
+
+.sponsorship-card.hole-in-one .header-price {
+  color: var(--error);
+}
+
+.sponsorship-card.adult-beverage .header-price {
+  color: #8b5cf6;
+}
+
+.sponsorship-card.tee .header-price {
+  color: #059669;
+}
+
+.sponsorship-card.driving-range .header-price {
+  color: #dc2626;
+}
+
+.availability-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-xs);
+  background: var(--gray-100);
+  padding: var(--space-xs) var(--space-sm);
+  border-radius: var(--radius-lg);
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: var(--gray-700);
+}
+
+.availability-icon {
+  font-size: 0.875rem;
+}
+
+.toggle-container {
+  display: flex;
+  align-items: center;
+  gap: var(--space-sm);
+}
+
+.toggle-text {
+  color: var(--gray-500);
+  font-size: 0.875rem;
+  font-weight: 500;
+  white-space: nowrap;
+}
+
+.toggle-icon {
+  font-size: 1.5rem;
+  color: var(--gray-400);
+  transition: transform 0.3s ease;
+  width: 32px;
+  height: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--gray-100);
+  border-radius: 50%;
+}
+
+.sponsorship-card.active .toggle-icon {
+  transform: rotate(45deg);
+}
+
+.sponsorship-card.legacy.active .toggle-icon {
+  background: var(--accent-gold);
+  color: var(--white);
+}
+
+.sponsorship-card.master.active .toggle-icon {
+  background: var(--primary-blue);
+  color: var(--white);
+}
+
+.sponsorship-card.pin-flag.active .toggle-icon {
+  background: var(--success);
+  color: var(--white);
+}
+
+.sponsorship-card.guiding-mentor.active .toggle-icon {
+  background: var(--warning);
+  color: var(--white);
+}
+
+.sponsorship-card.hole-in-one.active .toggle-icon {
+  background: var(--error);
+  color: var(--white);
+}
+
+.sponsorship-card.adult-beverage.active .toggle-icon {
+  background: #8b5cf6;
+  color: var(--white);
+}
+
+.sponsorship-card.tee.active .toggle-icon {
+  background: #059669;
+  color: var(--white);
+}
+
+.sponsorship-card.driving-range.active .toggle-icon {
+  background: #dc2626;
+  color: var(--white);
+}
+
+/* Card Content */
+.card-content {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.5s ease;
+}
+
+.sponsorship-card.active .card-content {
+  max-height: 2000px; /* Large enough to accommodate content */
+}
+
+.content-inner {
+  padding: 0 var(--space-lg) var(--space-lg);
+  opacity: 0;
+  transform: translateY(-20px);
+  transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.sponsorship-card.active .content-inner {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Benefits Grid */
+.benefits-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: var(--space-lg);
+  margin-bottom: var(--space-xl);
+}
+
+.benefit-category {
+  background: var(--gray-50);
+  padding: var(--space-lg);
+  border-radius: var(--radius-lg);
+  border: 1px solid var(--gray-200);
+}
+
+.benefit-category h4 {
+  color: var(--navy);
+  font-weight: 600;
+  margin-bottom: var(--space-md);
+  font-size: 1rem;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  border-bottom: 2px solid var(--gray-200);
+  padding-bottom: var(--space-xs);
+}
+
+.sponsorship-card.legacy .benefit-category h4 {
+  border-bottom-color: var(--accent-gold);
+}
+
+.sponsorship-card.master .benefit-category h4 {
+  border-bottom-color: var(--primary-blue);
+}
+
+.sponsorship-card.pin-flag .benefit-category h4 {
+  border-bottom-color: var(--success);
+}
+
+.sponsorship-card.guiding-mentor .benefit-category h4 {
+  border-bottom-color: var(--warning);
+}
+
+.sponsorship-card.hole-in-one .benefit-category h4 {
+  border-bottom-color: var(--error);
+}
+
+.sponsorship-card.adult-beverage .benefit-category h4 {
+  border-bottom-color: #8b5cf6;
+}
+
+.sponsorship-card.tee .benefit-category h4 {
+  border-bottom-color: #059669;
+}
+
+.sponsorship-card.driving-range .benefit-category h4 {
+  border-bottom-color: #dc2626;
+}
+
+.benefit-category ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.benefit-category li {
+  padding: var(--space-xs) 0;
+  color: var(--gray-700);
+  font-size: 0.9rem;
+  line-height: 1.4;
+  position: relative;
+  padding-left: var(--space-lg);
+}
+
+.benefit-category li::before {
+  content: '✓';
+  position: absolute;
+  left: 0;
+  color: var(--success);
+  font-weight: 700;
+}
+
+/* Special Content */
+.special-content {
+  margin-bottom: var(--space-lg);
+}
+
+.contest-choice {
+  background: var(--gray-50);
+  padding: var(--space-lg);
+  border-radius: var(--radius-lg);
+  border: 1px solid var(--gray-200);
+  margin-bottom: var(--space-lg);
+}
+
+.contest-choice h4 {
+  color: var(--navy);
+  font-weight: 600;
+  margin-bottom: var(--space-xs);
+  font-size: 1rem;
+}
+
+.contest-choice p {
+  color: var(--gray-600);
+  font-style: italic;
+  margin-bottom: var(--space-md);
+  font-size: 0.9rem;
+}
+
+.contest-options {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: var(--space-xs);
+}
+
+.contest-options li {
+  padding: var(--space-xs);
+  background: var(--white);
+  border-radius: var(--radius-md);
+  border: 1px solid var(--gray-200);
+  text-align: center;
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: var(--navy);
+}
+
+.special-note {
+  background: rgba(139, 92, 246, 0.1);
+  border: 1px solid rgba(139, 92, 246, 0.3);
+  padding: var(--space-md);
+  border-radius: var(--radius-lg);
+  margin-bottom: var(--space-lg);
+}
+
+.special-note p {
+  margin-bottom: var(--space-xs);
+  font-size: 0.9rem;
+  color: var(--navy);
+}
+
+.special-note p:first-child {
+  font-weight: 700;
+  color: #8b5cf6;
+}
+
+.upgrade-option {
+  background: var(--gray-50);
+  padding: var(--space-lg);
+  border-radius: var(--radius-lg);
+  border: 2px solid var(--accent-gold);
+  margin-bottom: var(--space-lg);
+}
+
+.upgrade-highlight h4 {
+  color: var(--accent-gold);
+  font-weight: 700;
+  margin-bottom: var(--space-sm);
+  font-size: 1.125rem;
+}
+
+.upgrade-highlight p {
+  color: var(--gray-700);
+  margin-bottom: var(--space-xs);
+  font-size: 0.95rem;
+}
+
+.pricing-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: var(--space-md);
+  margin-bottom: var(--space-lg);
+}
+
+.pricing-option {
+  background: var(--white);
+  padding: var(--space-md);
+  border-radius: var(--radius-lg);
+  border: 1px solid var(--gray-200);
+  text-align: center;
+  transition: all 0.3s ease;
+}
+
+.pricing-option:hover {
+  border-color: #dc2626;
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-md);
+}
+
+.pricing-option.featured {
+  border-color: var(--accent-gold);
+  background: rgba(245, 158, 11, 0.05);
+}
+
+.pricing-label {
+  font-size: 0.875rem;
+  color: var(--gray-600);
+  margin-bottom: var(--space-xs);
+  font-weight: 500;
+}
+
+.pricing-amount {
+  font-family: var(--font-display);
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #dc2626;
+}
+
+.pricing-option.featured .pricing-amount {
+  color: var(--accent-gold);
+}
+
+/* Quick Select Button */
+.quick-select {
+  margin: var(--space-md) 0;
+  text-align: left;
+}
+
+.quick-select-btn {
+  background: var(--primary-blue);
+  color: var(--white);
+  border: none;
+  padding: var(--space-sm) var(--space-lg);
+  border-radius: var(--radius-lg);
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-size: 0.95rem;
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-sm);
+}
+
+.quick-select-btn:hover {
+  background: var(--primary-blue-dark);
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-sm);
+}
+
+.sponsorship-card.legacy .quick-select-btn {
+  background: var(--accent-gold);
+}
+
+.sponsorship-card.legacy .quick-select-btn:hover {
+  background: var(--accent-gold-dark);
+}
+
+.sponsorship-card.master .quick-select-btn {
+  background: var(--primary-blue);
+}
+
+.sponsorship-card.pin-flag .quick-select-btn {
+  background: var(--success);
+}
+
+.sponsorship-card.pin-flag .quick-select-btn:hover {
+  background: #0d9668;
+}
+
+.sponsorship-card.guiding-mentor .quick-select-btn {
+  background: var(--warning);
+}
+
+.sponsorship-card.guiding-mentor .quick-select-btn:hover {
+  background: var(--accent-gold-dark);
+}
+
+.sponsorship-card.hole-in-one .quick-select-btn {
+  background: var(--error);
+}
+
+.sponsorship-card.hole-in-one .quick-select-btn:hover {
+  background: #dc2626;
+}
+
+.sponsorship-card.adult-beverage .quick-select-btn {
+  background: #8b5cf6;
+}
+
+.sponsorship-card.adult-beverage .quick-select-btn:hover {
+  background: #7c3aed;
+}
+
+.sponsorship-card.tee .quick-select-btn {
+  background: #059669;
+}
+
+.sponsorship-card.tee .quick-select-btn:hover {
+  background: #047857;
+}
+
+.sponsorship-card.driving-range .quick-select-btn {
+  background: #dc2626;
+}
+
+.sponsorship-card.driving-range .quick-select-btn:hover {
+  background: #b91c1c;
+}
+
+.quick-select-icon {
+  font-size: 1.125rem;
+}
+
+/* Card Footer */
+.card-footer {
+  padding: 0 var(--space-lg) var(--space-lg);
+  display: flex;
+  justify-content: center;
+}
+
+.sponsorship-btn {
+  padding: var(--space-md) var(--space-2xl);
+  border-radius: var(--radius-xl);
+  font-size: 1.125rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+  color: var(--white);
+  border: none;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 250px;
+}
+
+.sponsorship-card.legacy .sponsorship-btn {
+  background: linear-gradient(135deg, var(--accent-gold), var(--accent-gold-dark));
+  box-shadow: 0 8px 25px rgba(245, 158, 11, 0.3);
+}
+
+.sponsorship-card.master .sponsorship-btn {
+  background: linear-gradient(135deg, var(--primary-blue), var(--primary-blue-dark));
+  box-shadow: 0 8px 25px rgba(37, 99, 235, 0.3);
+}
+
+.sponsorship-card.pin-flag .sponsorship-btn {
+  background: linear-gradient(135deg, var(--success), var(--accent-gold));
+  box-shadow: 0 8px 25px rgba(16, 185, 129, 0.3);
+}
+
+.sponsorship-card.guiding-mentor .sponsorship-btn {
+  background: linear-gradient(135deg, var(--warning), var(--accent-gold));
+  box-shadow: 0 8px 25px rgba(245, 158, 11, 0.3);
+}
+
+.sponsorship-card.hole-in-one .sponsorship-btn {
+  background: linear-gradient(135deg, var(--error), var(--accent-gold));
+  box-shadow: 0 8px 25px rgba(239, 68, 68, 0.3);
+}
+
+.sponsorship-card.adult-beverage .sponsorship-btn {
+  background: linear-gradient(135deg, #8b5cf6, var(--accent-gold));
+  box-shadow: 0 8px 25px rgba(139, 92, 246, 0.3);
+}
+
+.sponsorship-card.tee .sponsorship-btn {
+  background: linear-gradient(135deg, #059669, var(--accent-gold));
+  box-shadow: 0 8px 25px rgba(5, 150, 105, 0.3);
+}
+
+.sponsorship-card.driving-range .sponsorship-btn {
+  background: linear-gradient(135deg, #dc2626, var(--accent-gold));
+  box-shadow: 0 8px 25px rgba(220, 38, 38, 0.3);
+}
+
+.sponsorship-btn:hover {
+  transform: translateY(-2px);
+}
+
+.sponsorship-card.legacy .sponsorship-btn:hover {
+  box-shadow: 0 15px 35px rgba(245, 158, 11, 0.4);
+}
+
+.sponsorship-card.master .sponsorship-btn:hover {
+  box-shadow: 0 15px 35px rgba(37, 99, 235, 0.4);
+}
+
+.sponsorship-card.pin-flag .sponsorship-btn:hover {
+  box-shadow: 0 15px 35px rgba(16, 185, 129, 0.4);
+}
+
+.sponsorship-card.guiding-mentor .sponsorship-btn:hover {
+  box-shadow: 0 15px 35px rgba(245, 158, 11, 0.4);
+}
+
+.sponsorship-card.hole-in-one .sponsorship-btn:hover {
+  box-shadow: 0 15px 35px rgba(239, 68, 68, 0.4);
+}
+
+.sponsorship-card.adult-beverage .sponsorship-btn:hover {
+  box-shadow: 0 15px 35px rgba(139, 92, 246, 0.4);
+}
+
+.sponsorship-card.tee .sponsorship-btn:hover {
+  box-shadow: 0 15px 35px rgba(5, 150, 105, 0.4);
+}
+
+.sponsorship-card.driving-range .sponsorship-btn:hover {
+  box-shadow: 0 15px 35px rgba(220, 38, 38, 0.4);
+}
+
+/* Button shine effect */
+.btn-shine {
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255,255,255,0.3), transparent);
+  transition: left 0.6s;
+}
+
+.sponsorship-btn:hover .btn-shine {
+  left: 100%;
+}
+
+/* Why Partner Section */
+.why-partner {
+  background: var(--gray-50);
+}
+
+.partner-benefits {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: var(--space-xl);
+}
+
+.benefit-card {
+  background: var(--white);
+  padding: var(--space-2xl);
+  border-radius: var(--radius-2xl);
+  box-shadow: var(--shadow-lg);
+  border: 1px solid var(--gray-200);
+  transition: all 0.3s ease;
+  text-align: center;
+}
+
+.benefit-card:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-xl);
+  border-color: var(--primary-blue);
+}
+
+.benefit-icon {
+  font-size: 3rem;
+  margin-bottom: var(--space-lg);
+  display: block;
+}
+
+.benefit-card h3 {
+  color: var(--navy);
+  margin-bottom: var(--space-md);
+  font-size: 1.375rem;
+}
+
+.benefit-card p {
+  color: var(--gray-600);
+  line-height: 1.6;
+  margin-bottom: 0;
+}
+
+/* Additional Sponsorships */
+.additional-sponsorships {
+  background: var(--gray-50);
+}
+
+.additional-notice {
+  background: var(--white);
+  border-radius: var(--radius-2xl);
+  box-shadow: var(--shadow-lg);
+  border: 1px solid var(--gray-200);
+  margin-bottom: var(--space-2xl);
+}
+
+.notice-content {
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  gap: var(--space-xl);
+  align-items: center;
+  padding: var(--space-2xl);
+}
+
+.notice-icon {
+  font-size: 3rem;
+  color: var(--primary-blue);
+}
+
+.notice-text h3 {
+  color: var(--navy);
+  margin-bottom: var(--space-sm);
+  font-size: 1.375rem;
+}
+
+.notice-text p {
+  color: var(--gray-600);
+  margin-bottom: 0;
+  line-height: 1.6;
+}
+
+.support-options h3 {
+  color: var(--navy);
+  margin-bottom: var(--space-xl);
+  text-align: center;
+  font-size: 1.75rem;
+}
+
+.support-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: var(--space-lg);
+}
+
+.support-card {
+  background: var(--white);
+  padding: var(--space-xl);
+  border-radius: var(--radius-xl);
+  box-shadow: var(--shadow-md);
+  border: 1px solid var(--gray-200);
+  text-align: center;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.support-card:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-lg);
+  border-color: var(--primary-blue);
+}
+
+.support-icon {
+  font-size: 2.5rem;
+  margin-bottom: var(--space-md);
+  display: block;
+  color: var(--primary-blue);
+}
+
+.support-card h4 {
+  color: var(--navy);
+  margin-bottom: var(--space-sm);
+  font-size: 1.125rem;
+}
+
+.support-card p {
+  color: var(--gray-600);
+  line-height: 1.5;
+  margin-bottom: 0;
+  font-size: 0.95rem;
+}
+
+/* Impact Showcase */
+.impact-showcase {
+  background: var(--navy);
+  color: var(--white);
+}
+
+.impact-content {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: var(--space-3xl);
+  align-items: center;
+}
+
+.impact-visual {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.impact-circle {
+  width: 200px;
+  height: 200px;
+  background: linear-gradient(135deg, var(--accent-gold), var(--accent-gold-light));
+  border-radius: 50%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  box-shadow: 0 20px 40px rgba(245, 158, 11, 0.3);
+  position: relative;
+  animation: float 6s ease-in-out infinite;
+}
+
+.impact-circle::before {
+  content: '';
+  position: absolute;
+  inset: -8px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, var(--accent-gold), var(--primary-blue));
+  z-index: -1;
+  opacity: 0.3;
+  animation: pulse 3s ease-in-out infinite;
+}
+
+.impact-number {
+  font-family: var(--font-display);
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: var(--white);
+  line-height: 1;
+  margin-bottom: var(--space-xs);
+}
+
+.impact-label {
+  font-size: 0.875rem;
+  color: var(--white);
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.impact-text h2 {
+  color: var(--white);
+  margin-bottom: var(--space-lg);
+  font-size: clamp(1.75rem, 3vw, 2.5rem);
+}
+
+.impact-text p {
+  color: var(--gray-300);
+  font-size: 1.25rem;
+  line-height: 1.7;
+  margin-bottom: var(--space-xl);
+}
+
+.impact-breakdown {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-lg);
+}
+
+.breakdown-item {
+  display: flex;
+  align-items: flex-start;
+  gap: var(--space-md);
+  padding: var(--space-md);
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: var(--radius-lg);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  transition: all 0.3s ease;
+}
+
+.breakdown-item:hover {
+  background: rgba(255, 255, 255, 0.08);
+  border-color: var(--accent-gold);
+  transform: translateX(8px);
+}
+
+.breakdown-icon {
+  font-size: 1.5rem;
+  background: var(--accent-gold);
+  color: var(--white);
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.breakdown-content h4 {
+  color: var(--white);
+  font-size: 1.125rem;
+  margin-bottom: var(--space-xs);
+}
+
+.breakdown-content p {
+  color: var(--gray-400);
+  margin-bottom: 0;
+  font-size: 1rem;
+  line-height: 1.5;
+}
+
+/* Next Steps */
+.next-steps {
+  background: var(--white);
+}
+
+.steps-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: var(--space-xl);
+  margin-bottom: var(--space-2xl);
+}
+
+.step-card {
+  text-align: center;
+  padding: var(--space-2xl);
+  background: var(--gray-50);
+  border-radius: var(--radius-2xl);
+  border: 1px solid var(--gray-200);
+  transition: all 0.3s ease;
+}
+
+.step-card:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-lg);
+  border-color: var(--primary-blue);
+}
+
+.step-number {
+  width: 60px;
+  height: 60px;
+  background: var(--gradient-primary);
+  color: var(--white);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin: 0 auto var(--space-lg);
+  box-shadow: 0 8px 25px rgba(37, 99, 235, 0.3);
+}
+
+.step-card h3 {
+  color: var(--navy);
+  margin-bottom: var(--space-md);
+  font-size: 1.375rem;
+}
+
+.step-card p {
+  color: var(--gray-600);
+  line-height: 1.6;
+  margin-bottom: 0;
+}
+
+.contact-cta {
+  text-align: center;
+  background: var(--gray-50);
+  padding: var(--space-2xl);
+  border-radius: var(--radius-2xl);
+  border: 1px solid var(--gray-200);
+}
+
+.contact-cta h3 {
+  color: var(--navy);
+  margin-bottom: var(--space-lg);
+  font-size: 1.75rem;
+}
+
+.contact-options {
+  display: flex;
+  justify-content: center;
+  gap: var(--space-lg);
+  flex-wrap: wrap;
+}
+
+.contact-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-sm);
+  padding: var(--space-lg) var(--space-xl);
+  border-radius: var(--radius-xl);
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 1.125rem;
+  transition: all 0.3s ease;
+  min-width: 200px;
+  justify-content: center;
+}
+
+.contact-btn.primary {
+  background: var(--gradient-primary);
+  color: var(--white);
+  box-shadow: 0 8px 25px rgba(37, 99, 235, 0.3);
+}
+
+.contact-btn.primary:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 12px 35px rgba(37, 99, 235, 0.4);
+  color: var(--white);
+}
+
+.contact-btn.secondary {
+  background: transparent;
+  color: var(--primary-blue);
+  border: 2px solid var(--primary-blue);
+}
+
+.contact-btn.secondary:hover {
+  background: var(--primary-blue);
+  color: var(--white);
+  transform: translateY(-2px);
+}
+
+.btn-icon {
+  font-size: 1.25rem;
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+  .sponsorship-hero .hero-content {
+    grid-template-columns: 1fr;
+    grid-template-rows: auto auto auto;
+    gap: var(--space-xl);
+    text-align: center;
+    padding-top: 120px;
+  }
+  
+  .sponsorship-hero .hero-title {
+    grid-column: 1;
+    grid-row: 1;
+    text-align: center;
+  }
+  
+  .sponsorship-hero .hero-subtitle {
+    grid-column: 1;
+    grid-row: 2;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  
+  .hero-stats {
+    grid-column: 1;
+    grid-row: 3;
+    justify-content: center;
+  }
+  
+  .header-left {
+    flex-direction: column;
+    text-align: center;
+    gap: var(--space-md);
+  }
+  
+  .header-right {
+    align-items: center;
+  }
+  
+  .card-header {
+    flex-direction: column;
+    gap: var(--space-lg);
+    text-align: center;
+  }
+  
+  .benefits-grid {
+    grid-template-columns: 1fr;
+    gap: var(--space-md);
+  }
+  
+  .pricing-grid {
+    grid-template-columns: 1fr;
+    gap: var(--space-sm);
+  }
+  
+  .notice-content {
+    grid-template-columns: 1fr;
+    gap: var(--space-lg);
+    text-align: center;
+  }
+  
+  .impact-content {
+    grid-template-columns: 1fr;
+    gap: var(--space-2xl);
+    text-align: center;
+  }
+  
+  .steps-grid {
+    grid-template-columns: 1fr;
+    gap: var(--space-lg);
+  }
+}
+
+@media (max-width: 768px) {
+  .sponsorship-hero .hero-content {
+    padding-top: 100px;
+    padding-bottom: var(--space-2xl);
+  }
+  
+  .hero-stats {
+    flex-direction: column;
+    gap: var(--space-md);
+    padding-bottom: var(--space-2xl);
+  }
+  
+  .stat-divider {
+    width: 40px;
+    height: 1px;
+  }
+  
+  .partner-benefits {
+    grid-template-columns: 1fr;
+    gap: var(--space-lg);
+  }
+  
+  .support-grid {
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: var(--space-md);
+  }
+  
+  .impact-circle {
+    width: 160px;
+    height: 160px;
+  }
+  
+  .impact-number {
+    font-size: 2rem;
+  }
+  
+  .breakdown-item {
+    flex-direction: column;
+    text-align: center;
+    gap: var(--space-sm);
+  }
+  
+  .contact-options {
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .contact-btn {
+    width: 100%;
+    max-width: 300px;
+  }
+  
+  .contest-options {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Animation Enhancements */
+@keyframes countUp {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.stat-number.counting {
+  animation: countUp 0.6s ease-out;
+}
+
+/* Print Styles */
+@media print {
+  .sponsorship-hero,
+  .floating-elements,
+  .hero-stats {
+    display: none !important;
+  }
+  
+  .benefit-category,
+  .support-card {
+    break-inside: avoid;
+    page-break-inside: avoid;
+  }
+}
+
+/* Highlighted support card */
+.support-card.highlighted {
+  border-color: var(--accent-gold) !important;
+  box-shadow: 0 0 30px rgba(245, 158, 11, 0.4) !important;
+  transform: translateY(-8px) !important;
+  animation: pulse-highlight 2s ease-in-out;
+}
+
+@keyframes pulse-highlight {
+  0%, 100% { box-shadow: 0 0 30px rgba(245, 158, 11, 0.4); }
+  50% { box-shadow: 0 0 50px rgba(245, 158, 11, 0.6); }
+}

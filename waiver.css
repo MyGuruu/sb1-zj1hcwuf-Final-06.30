@@ -1,0 +1,460 @@
+/* Tournament Waiver Page Specific Styles */
+
+/* Waiver Hero - Even smaller than privacy/terms pages */
+.waiver-hero {
+  min-height: 30vh; /* Smaller than other hero sections */
+  position: relative;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+  background: linear-gradient(135deg, var(--navy) 0%, var(--primary-blue) 100%);
+}
+
+.waiver-hero .hero-background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: url('/Golf Cart Lineup.jpg') center/cover no-repeat;
+  z-index: 1;
+  opacity: 0.15; /* Very subtle background */
+}
+
+.waiver-hero .hero-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(135deg, rgba(15, 23, 42, 0.92), rgba(37, 99, 235, 0.85));
+  z-index: 2;
+}
+
+.waiver-hero .hero-container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 var(--space-lg);
+  position: relative;
+  z-index: 10;
+}
+
+.waiver-hero .hero-content {
+  text-align: center;
+  padding-top: 120px;
+  padding-bottom: var(--space-lg);
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.waiver-hero .hero-title {
+  font-family: var(--font-display);
+  font-size: clamp(2rem, 4vw, 3rem);
+  font-weight: 700;
+  line-height: 1.1;
+  color: var(--white);
+  margin-bottom: var(--space-md);
+  animation: fadeInUp 0.8s ease-out 0.4s both;
+}
+
+.waiver-hero .hero-subtitle {
+  font-size: 1.25rem;
+  line-height: 1.6;
+  color: rgba(255, 255, 255, 0.9);
+  margin-bottom: 0;
+  max-width: 700px;
+  margin-left: auto;
+  margin-right: auto;
+  animation: fadeInUp 0.8s ease-out 0.6s both;
+}
+
+/* Waiver Content */
+.waiver-content {
+  background: var(--white);
+  padding: var(--space-3xl) 0;
+}
+
+.waiver-container {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 0 var(--space-lg);
+}
+
+.waiver-section {
+  margin-bottom: var(--space-2xl);
+}
+
+.waiver-section:last-child {
+  margin-bottom: 0;
+}
+
+.waiver-section h2 {
+  color: var(--navy);
+  font-size: 1.75rem;
+  margin-bottom: var(--space-md);
+  font-weight: 700;
+}
+
+.waiver-section p {
+  color: var(--gray-700);
+  font-size: 1.125rem;
+  line-height: 1.7;
+  margin-bottom: var(--space-md);
+}
+
+.waiver-section ul {
+  margin: var(--space-md) 0;
+  padding-left: var(--space-xl);
+  color: var(--gray-700);
+}
+
+.waiver-section li {
+  margin-bottom: var(--space-sm);
+  font-size: 1.125rem;
+  line-height: 1.7;
+}
+
+.waiver-section strong {
+  color: var(--navy);
+  font-weight: 600;
+}
+
+.waiver-section a {
+  color: var(--primary-blue);
+  text-decoration: none;
+  font-weight: 600;
+  transition: color 0.2s ease;
+}
+
+.waiver-section a:hover {
+  color: var(--primary-blue-dark);
+  text-decoration: underline;
+}
+
+.waiver-date {
+  font-style: italic;
+  color: var(--gray-600);
+  margin-bottom: var(--space-xl);
+  font-size: 1rem;
+}
+
+.waiver-intro {
+  font-size: 1.25rem;
+  color: var(--gray-700);
+  line-height: 1.7;
+  margin-bottom: var(--space-xl);
+  padding-bottom: var(--space-lg);
+  border-bottom: 1px solid var(--gray-200);
+}
+
+.contact-info {
+  background: var(--gray-50);
+  padding: var(--space-lg);
+  border-radius: var(--radius-lg);
+  margin-top: var(--space-lg);
+}
+
+.contact-info p {
+  margin-bottom: 0;
+}
+
+.waiver-footer {
+  text-align: center;
+  margin-top: var(--space-2xl);
+  padding-top: var(--space-xl);
+  border-top: 1px solid var(--gray-200);
+  font-style: italic;
+  color: var(--gray-600);
+}
+
+/* Print Button */
+.print-waiver {
+  display: flex;
+  justify-content: center;
+  margin: var(--space-xl) 0;
+}
+
+.print-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-sm);
+  background: var(--primary-blue);
+  color: var(--white);
+  border: none;
+  padding: var(--space-md) var(--space-xl);
+  border-radius: var(--radius-lg);
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-size: 1rem;
+}
+
+.print-btn:hover {
+  background: var(--primary-blue-dark);
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-md);
+}
+
+.print-icon {
+  font-size: 1.25rem;
+}
+
+/* Waiver Modal Styles */
+.waiver-modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.75);
+  backdrop-filter: blur(5px);
+  z-index: 9999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.waiver-modal-container {
+  background: var(--white);
+  border-radius: var(--radius-xl);
+  width: 90%;
+  max-width: 800px;
+  max-height: 90vh;
+  overflow: hidden;
+  box-shadow: var(--shadow-xl);
+  transform: translateY(20px);
+  transition: transform 0.3s ease;
+  display: flex;
+  flex-direction: column;
+}
+
+.waiver-modal-header {
+  padding: var(--space-lg);
+  background: var(--primary-blue);
+  color: var(--white);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: sticky;
+  top: 0;
+  z-index: 1;
+}
+
+.waiver-modal-title {
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin: 0;
+}
+
+.waiver-modal-close {
+  background: rgba(255, 255, 255, 0.2);
+  border: none;
+  color: var(--white);
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.25rem;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.waiver-modal-close:hover {
+  background: rgba(255, 255, 255, 0.3);
+  transform: scale(1.1);
+}
+
+.waiver-modal-content {
+  padding: var(--space-xl);
+  overflow-y: auto;
+  flex: 1;
+}
+
+.waiver-modal-footer {
+  padding: var(--space-lg);
+  background: var(--gray-50);
+  border-top: 1px solid var(--gray-200);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: sticky;
+  bottom: 0;
+}
+
+.waiver-modal-footer .print-btn {
+  background: var(--gray-600);
+}
+
+.waiver-modal-footer .print-btn:hover {
+  background: var(--gray-700);
+}
+
+.waiver-accept-btn {
+  background: var(--success);
+  color: var(--white);
+  border: none;
+  padding: var(--space-md) var(--space-xl);
+  border-radius: var(--radius-lg);
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-size: 1rem;
+  display: flex;
+  align-items: center;
+  gap: var(--space-sm);
+}
+
+.waiver-accept-btn:hover {
+  background: #0d9668;
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-md);
+}
+
+.waiver-accept-icon {
+  font-size: 1.25rem;
+}
+
+/* Waiver Checkbox in Checkout */
+.waiver-checkbox-container {
+  background: var(--gray-50);
+  padding: var(--space-lg);
+  border-radius: var(--radius-lg);
+  border: 1px solid var(--gray-200);
+  margin-bottom: var(--space-lg);
+}
+
+.waiver-checkbox-container.error {
+  border-color: var(--error);
+  background: rgba(239, 68, 68, 0.05);
+}
+
+.waiver-checkbox-group {
+  display: flex;
+  align-items: flex-start;
+  gap: var(--space-sm);
+}
+
+.waiver-checkbox-group input[type="checkbox"] {
+  width: auto;
+  margin-top: 0.25rem;
+  transform: scale(1.2);
+}
+
+.waiver-checkbox-group label {
+  font-size: 0.95rem;
+  line-height: 1.5;
+  color: var(--gray-700);
+}
+
+.waiver-link {
+  color: var(--primary-blue);
+  text-decoration: none;
+  font-weight: 600;
+  cursor: pointer;
+  transition: color 0.2s ease;
+}
+
+.waiver-link:hover {
+  color: var(--primary-blue-dark);
+  text-decoration: underline;
+}
+
+.waiver-error-message {
+  color: var(--error);
+  font-size: 0.875rem;
+  margin-top: var(--space-sm);
+  display: none;
+}
+
+.waiver-error-message.show {
+  display: block;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .waiver-hero {
+    min-height: 25vh;
+  }
+  
+  .waiver-hero .hero-content {
+    padding-top: 100px;
+    padding-bottom: var(--space-md);
+  }
+  
+  .waiver-section h2 {
+    font-size: 1.5rem;
+  }
+  
+  .waiver-section p,
+  .waiver-section li {
+    font-size: 1rem;
+  }
+  
+  .waiver-intro {
+    font-size: 1.125rem;
+  }
+  
+  .waiver-modal-footer {
+    flex-direction: column;
+    gap: var(--space-md);
+  }
+  
+  .waiver-modal-footer .print-btn,
+  .waiver-accept-btn {
+    width: 100%;
+    justify-content: center;
+  }
+}
+
+/* Print Styles */
+@media print {
+  .header,
+  .footer,
+  .waiver-hero,
+  .print-waiver {
+    display: none !important;
+  }
+  
+  .waiver-content {
+    padding: 0;
+  }
+  
+  .waiver-container {
+    max-width: 100%;
+    padding: 0;
+  }
+  
+  .waiver-section {
+    page-break-inside: avoid;
+  }
+  
+  body {
+    font-size: 12pt;
+    line-height: 1.5;
+  }
+  
+  h1, h2 {
+    page-break-after: avoid;
+  }
+  
+  ul, ol {
+    page-break-before: avoid;
+  }
+}
+
+/* Animation */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

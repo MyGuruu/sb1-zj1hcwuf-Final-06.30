@@ -1,0 +1,206 @@
+/* Privacy Policy Page Specific Styles */
+
+/* Privacy Policy Hero */
+.privacy-hero {
+  min-height: 45vh; /* Half the size of other hero sections */
+  position: relative;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+  background: linear-gradient(135deg, var(--navy) 0%, var(--primary-blue) 100%);
+}
+
+.privacy-hero .hero-background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: url('/Golf Cart Lineup.jpg') center/cover no-repeat;
+  z-index: 1;
+  opacity: 0.2; /* More subtle background */
+}
+
+.privacy-hero .hero-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(135deg, rgba(15, 23, 42, 0.9), rgba(37, 99, 235, 0.8));
+  z-index: 2;
+}
+
+.privacy-hero .hero-container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 var(--space-lg);
+  position: relative;
+  z-index: 10;
+}
+
+.privacy-hero .hero-content {
+  text-align: center;
+  padding-top: 120px;
+  padding-bottom: var(--space-xl);
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.privacy-hero .hero-title {
+  font-family: var(--font-display);
+  font-size: clamp(2rem, 4vw, 3.5rem);
+  font-weight: 700;
+  line-height: 1.1;
+  color: var(--white);
+  margin-bottom: var(--space-md);
+  animation: fadeInUp 0.8s ease-out 0.4s both;
+}
+
+.privacy-hero .hero-subtitle {
+  font-size: 1.25rem;
+  line-height: 1.6;
+  color: rgba(255, 255, 255, 0.9);
+  margin-bottom: 0;
+  max-width: 700px;
+  margin-left: auto;
+  margin-right: auto;
+  animation: fadeInUp 0.8s ease-out 0.6s both;
+}
+
+/* Privacy Content */
+.privacy-content {
+  background: var(--white);
+  padding: var(--space-3xl) 0;
+}
+
+.privacy-container {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 0 var(--space-lg);
+}
+
+.privacy-section {
+  margin-bottom: var(--space-2xl);
+}
+
+.privacy-section:last-child {
+  margin-bottom: 0;
+}
+
+.privacy-section h2 {
+  color: var(--navy);
+  font-size: 1.75rem;
+  margin-bottom: var(--space-md);
+  font-weight: 700;
+}
+
+.privacy-section p {
+  color: var(--gray-700);
+  font-size: 1.125rem;
+  line-height: 1.7;
+  margin-bottom: var(--space-md);
+}
+
+.privacy-section ul {
+  margin: var(--space-md) 0;
+  padding-left: var(--space-xl);
+  color: var(--gray-700);
+}
+
+.privacy-section li {
+  margin-bottom: var(--space-sm);
+  font-size: 1.125rem;
+  line-height: 1.7;
+}
+
+.privacy-section strong {
+  color: var(--navy);
+  font-weight: 600;
+}
+
+.privacy-section a {
+  color: var(--primary-blue);
+  text-decoration: none;
+  font-weight: 600;
+  transition: color 0.2s ease;
+}
+
+.privacy-section a:hover {
+  color: var(--primary-blue-dark);
+  text-decoration: underline;
+}
+
+.privacy-date {
+  font-style: italic;
+  color: var(--gray-600);
+  margin-bottom: var(--space-xl);
+  font-size: 1rem;
+}
+
+.privacy-intro {
+  font-size: 1.25rem;
+  color: var(--gray-700);
+  line-height: 1.7;
+  margin-bottom: var(--space-xl);
+  padding-bottom: var(--space-lg);
+  border-bottom: 1px solid var(--gray-200);
+}
+
+.contact-info {
+  background: var(--gray-50);
+  padding: var(--space-lg);
+  border-radius: var(--radius-lg);
+  margin-top: var(--space-lg);
+}
+
+.contact-info p {
+  margin-bottom: 0;
+}
+
+.privacy-footer {
+  text-align: center;
+  margin-top: var(--space-2xl);
+  padding-top: var(--space-xl);
+  border-top: 1px solid var(--gray-200);
+  font-style: italic;
+  color: var(--gray-600);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .privacy-hero {
+    min-height: 40vh;
+  }
+  
+  .privacy-hero .hero-content {
+    padding-top: 100px;
+    padding-bottom: var(--space-lg);
+  }
+  
+  .privacy-section h2 {
+    font-size: 1.5rem;
+  }
+  
+  .privacy-section p,
+  .privacy-section li {
+    font-size: 1rem;
+  }
+  
+  .privacy-intro {
+    font-size: 1.125rem;
+  }
+}
+
+/* Animation */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

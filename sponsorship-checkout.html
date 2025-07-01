@@ -1,0 +1,677 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Complete your sponsorship partnership with The Guruu Foundation's Igniting Greatness Golf Tournament - Secure, professional, and designed for impact.">
+    <title>Complete Your Sponsorship - Igniting Greatness Golf Tournament</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Playfair+Display:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="sponsorship-checkout.css">
+    <link rel="stylesheet" href="waiver.css">
+    <script src="https://js.stripe.com/v3/"></script>
+  </head>
+  <body>
+    <!-- Header -->
+    <header class="header">
+      <nav class="nav container">
+        <div class="logo-container">
+          <a href="index.html">
+            <img src="/The Guruu Foundation Wordmark (Mini - Black Background) copy.png" alt="The Guruu Foundation" class="logo-wordmark">
+          </a>
+        </div>
+        <ul class="nav-links">
+          <li><a href="index.html#about">About</a></li>
+          <li><a href="index.html#why-matters">Impact</a></li>
+          <li><a href="sponsorship.html" class="nav-current">Sponsor</a></li>
+          <li><a href="volunteer.html">Get Involved</a></li>
+          <li><a href="registration.html">Register</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <!-- Sponsorship Checkout Hero -->
+    <section class="sponsorship-checkout-hero">
+      <div class="hero-background"></div>
+      <div class="hero-overlay"></div>
+      <div class="floating-elements">
+        <div class="floating-circle circle-1"></div>
+        <div class="floating-circle circle-2"></div>
+        <div class="floating-circle circle-3"></div>
+      </div>
+      
+      <div class="hero-container">
+        <div class="hero-content">
+          <div class="hero-badge">
+            <span class="badge-icon">🤝</span>
+            <span>Partnership Confirmation • September 5, 2025</span>
+          </div>
+          
+          <h1 class="hero-title">
+            <span class="title-line">Finalize Your</span>
+            <span class="title-line title-accent">Partnership</span>
+          </h1>
+          
+          <p class="hero-subtitle">Complete your sponsorship and join us as a partner in igniting greatness, creating opportunity, and transforming lives.</p>
+          
+          <div class="progress-indicator">
+            <div class="progress-step completed">
+              <div class="step-circle">
+                <span class="step-icon">🎯</span>
+              </div>
+              <span class="step-label">Select Package</span>
+            </div>
+            <div class="progress-connector completed"></div>
+            <div class="progress-step active">
+              <div class="step-circle">
+                <span class="step-icon">📋</span>
+              </div>
+              <span class="step-label">Partnership Details</span>
+            </div>
+            <div class="progress-connector"></div>
+            <div class="progress-step">
+              <div class="step-circle">
+                <span class="step-icon">✅</span>
+              </div>
+              <span class="step-label">Confirmation</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Sponsorship Form -->
+    <section class="sponsorship-form-section">
+      <div class="container">
+        <form id="sponsorship-form" class="sponsorship-form">
+          <!-- Sponsorship Package Summary -->
+          <div class="form-section package-summary">
+            <div class="section-header">
+              <div class="section-icon">🏆</div>
+              <h2>Your Sponsorship Package</h2>
+              <p>Review and confirm your partnership selection</p>
+            </div>
+            
+            <div class="package-selector">
+              <div class="selected-package" id="selected-package">
+                <div class="package-info">
+                  <div class="package-icon">🤝</div>
+                  <div class="package-details">
+                    <h3 id="package-name">Legacy Guruu Sponsorship</h3>
+                    <p id="package-description">Exclusive partnership with maximum impact and visibility</p>
+                    <div class="package-features" id="package-features">
+                      <!-- Features will be populated by JavaScript -->
+                    </div>
+                  </div>
+                  <div class="package-price">
+                    <span id="package-amount">$10,000</span>
+                  </div>
+                </div>
+                <button type="button" class="change-package-btn" id="change-package">
+                  <span>Change Package</span>
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Organization Information -->
+          <div class="form-section organization-info">
+            <div class="section-header">
+              <div class="section-icon">🏢</div>
+              <h2>Organization Information</h2>
+              <p>Tell us about your organization</p>
+            </div>
+            
+            <div class="form-grid">
+              <div class="form-group full-width">
+                <label for="organizationName">Organization/Company Name *</label>
+                <input type="text" id="organizationName" name="organizationName" required>
+              </div>
+              
+              <div class="form-group">
+                <label for="contactFirstName">Primary Contact First Name *</label>
+                <input type="text" id="contactFirstName" name="contactFirstName" required>
+              </div>
+              
+              <div class="form-group">
+                <label for="contactLastName">Primary Contact Last Name *</label>
+                <input type="text" id="contactLastName" name="contactLastName" required>
+              </div>
+              
+              <div class="form-group">
+                <label for="contactTitle">Title/Position</label>
+                <input type="text" id="contactTitle" name="contactTitle" placeholder="e.g., Marketing Director, CEO">
+              </div>
+              
+              <div class="form-group">
+                <label for="contactEmail">Contact Email *</label>
+                <input type="email" id="contactEmail" name="contactEmail" required>
+              </div>
+              
+              <div class="form-group">
+                <label for="contactPhone">Contact Phone *</label>
+                <input type="tel" id="contactPhone" name="contactPhone" required>
+              </div>
+              
+              <div class="form-group">
+                <div class="checkbox-group">
+                  <input type="checkbox" id="isMobile" name="isMobile">
+                  <label for="isMobile">This is a mobile number</label>
+                </div>
+                <div class="form-note" id="sms-notice" style="display: none;">
+                  <span class="note-icon">📱</span>
+                  <span>By checking this box, you agree to receive SMS messages about the tournament.</span>
+                </div>
+              </div>
+              
+              <div class="form-group full-width">
+                <label for="website">Organization Website</label>
+                <input type="url" id="website" name="website" placeholder="https://yourcompany.com">
+              </div>
+            </div>
+          </div>
+
+          <!-- Address Information -->
+          <div class="form-section address-info">
+            <div class="section-header">
+              <div class="section-icon">📍</div>
+              <h2>Organization Address</h2>
+              <p>For invoicing and correspondence</p>
+            </div>
+            
+            <div class="form-grid">
+              <div class="form-group full-width">
+                <label for="address1">Street Address *</label>
+                <input type="text" id="address1" name="address1" required>
+              </div>
+              
+              <div class="form-group full-width">
+                <label for="address2">Suite, Floor, etc. (Optional)</label>
+                <input type="text" id="address2" name="address2">
+              </div>
+              
+              <div class="form-group">
+                <label for="city">City *</label>
+                <input type="text" id="city" name="city" required>
+              </div>
+              
+              <div class="form-group">
+                <label for="state">State *</label>
+                <select id="state" name="state" required>
+                  <option value="">Select State</option>
+                  <option value="CA">California</option>
+                  <option value="AL">Alabama</option>
+                  <option value="AK">Alaska</option>
+                  <option value="AZ">Arizona</option>
+                  <option value="AR">Arkansas</option>
+                  <option value="CO">Colorado</option>
+                  <option value="CT">Connecticut</option>
+                  <option value="DE">Delaware</option>
+                  <option value="FL">Florida</option>
+                  <option value="GA">Georgia</option>
+                  <option value="HI">Hawaii</option>
+                  <option value="ID">Idaho</option>
+                  <option value="IL">Illinois</option>
+                  <option value="IN">Indiana</option>
+                  <option value="IA">Iowa</option>
+                  <option value="KS">Kansas</option>
+                  <option value="KY">Kentucky</option>
+                  <option value="LA">Louisiana</option>
+                  <option value="ME">Maine</option>
+                  <option value="MD">Maryland</option>
+                  <option value="MA">Massachusetts</option>
+                  <option value="MI">Michigan</option>
+                  <option value="MN">Minnesota</option>
+                  <option value="MS">Mississippi</option>
+                  <option value="MO">Missouri</option>
+                  <option value="MT">Montana</option>
+                  <option value="NE">Nebraska</option>
+                  <option value="NV">Nevada</option>
+                  <option value="NH">New Hampshire</option>
+                  <option value="NJ">New Jersey</option>
+                  <option value="NM">New Mexico</option>
+                  <option value="NY">New York</option>
+                  <option value="NC">North Carolina</option>
+                  <option value="ND">North Dakota</option>
+                  <option value="OH">Ohio</option>
+                  <option value="OK">Oklahoma</option>
+                  <option value="OR">Oregon</option>
+                  <option value="PA">Pennsylvania</option>
+                  <option value="RI">Rhode Island</option>
+                  <option value="SC">South Carolina</option>
+                  <option value="SD">South Dakota</option>
+                  <option value="TN">Tennessee</option>
+                  <option value="TX">Texas</option>
+                  <option value="UT">Utah</option>
+                  <option value="VT">Vermont</option>
+                  <option value="VA">Virginia</option>
+                  <option value="WA">Washington</option>
+                  <option value="WV">West Virginia</option>
+                  <option value="WI">Wisconsin</option>
+                  <option value="WY">Wyoming</option>
+                </select>
+              </div>
+              
+              <div class="form-group">
+                <label for="zipCode">ZIP Code *</label>
+                <input type="text" id="zipCode" name="zipCode" required>
+              </div>
+            </div>
+          </div>
+
+          <!-- Branding & Logo Upload -->
+          <div class="form-section branding-info" id="branding-info">
+            <div class="section-header">
+              <div class="section-icon">🎨</div>
+              <h2>Branding & Logo</h2>
+              <p>Upload your logo for tournament materials</p>
+            </div>
+            
+            <div class="form-grid">
+              <div class="form-group full-width">
+                <label>Logo Upload Options</label>
+                <div class="radio-group">
+                  <div class="radio-option">
+                    <input type="radio" id="uploadNow" name="logoOption" value="upload" checked>
+                    <label for="uploadNow">Upload logo now</label>
+                  </div>
+                  <div class="radio-option">
+                    <input type="radio" id="uploadLater" name="logoOption" value="later">
+                    <label for="uploadLater">I will supply artwork at a future date</label>
+                  </div>
+                </div>
+              </div>
+              
+              <div class="form-group full-width" id="logo-upload-section">
+                <label for="logoUpload">Upload Your Logo *</label>
+                <div class="file-upload-area" id="file-upload-area">
+                  <input type="file" id="logoUpload" name="logoUpload" accept=".svg,.ai,.eps,.pdf,.png,.jpg" style="display: none;">
+                  <div class="upload-content">
+                    <div class="upload-icon">📁</div>
+                    <div class="upload-text">
+                      <p><strong>Click to upload</strong> or drag and drop</p>
+                      <p class="upload-formats">SVG, AI, EPS, PDF, PNG, or JPG (Vector formats preferred)</p>
+                    </div>
+                  </div>
+                  <div class="upload-preview" id="upload-preview" style="display: none;">
+                    <div class="preview-content">
+                      <div class="preview-icon">✅</div>
+                      <div class="preview-info">
+                        <p class="file-name" id="file-name"></p>
+                        <p class="file-size" id="file-size"></p>
+                      </div>
+                      <button type="button" class="remove-file" id="remove-file">×</button>
+                    </div>
+                  </div>
+                </div>
+                <div class="form-note">
+                  <span class="note-icon">💡</span>
+                  <span>For best results, please upload vector files (SVG, AI, EPS) or high-resolution images (300 DPI minimum).</span>
+                </div>
+              </div>
+              
+              <div class="form-group full-width">
+                <label for="brandingNotes">Special Branding Instructions</label>
+                <textarea id="brandingNotes" name="brandingNotes" rows="3" placeholder="Any specific instructions for logo placement, colors, or branding requirements..."></textarea>
+              </div>
+            </div>
+          </div>
+
+          <!-- Golf Participation (for packages that include golf) -->
+          <div class="form-section golf-participation" id="golf-participation">
+            <div class="section-header">
+              <div class="section-icon">⛳</div>
+              <h2>Golf Participation</h2>
+              <p>Details for your golf experience</p>
+            </div>
+            
+            <div class="form-grid">
+              <div class="form-group full-width">
+                <label>Golf Participants</label>
+                <div class="participants-info">
+                  <p>Your sponsorship includes <span id="golf-spots">4</span> golf spots. Please provide participant information:</p>
+                </div>
+              </div>
+              
+              <div class="golf-participants" id="golf-participants">
+                <!-- Participant inputs will be dynamically generated -->
+              </div>
+              
+              <div class="form-group full-width">
+                <label for="golfNotes">Special Golf Requests</label>
+                <textarea id="golfNotes" name="golfNotes" rows="3" placeholder="Any special requests for golf carts, tee times, or other golf-related needs..."></textarea>
+              </div>
+              
+              <!-- Waiver notice for golf participants -->
+              <div class="form-group full-width">
+                <div class="waiver-checkbox-container">
+                  <div class="checkbox-group waiver-checkbox-group">
+                    <input type="checkbox" id="waiverAcknowledged" name="waiverAcknowledged" required>
+                    <label for="waiverAcknowledged">
+                      <strong>Tournament Waiver Acknowledgment:</strong> I understand that all golf participants must read and accept the <span class="waiver-link" id="open-waiver-modal">Tournament Waiver</span> prior to the event. Each player will receive a link to digitally sign the waiver, or they can complete it at check-in.
+                    </label>
+                  </div>
+                  <div id="waiver-error-message" class="waiver-error-message">You must acknowledge the Tournament Waiver requirement to continue.</div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Banquet Information -->
+          <div class="form-section banquet-info">
+            <div class="section-header">
+              <div class="section-icon">🍽️</div>
+              <h2>Banquet Information</h2>
+              <p>Evening celebration details</p>
+            </div>
+            
+            <div class="form-grid">
+              <div class="form-group full-width">
+                <div class="banquet-included">
+                  <p>Your sponsorship includes <span id="banquet-spots">8</span> banquet seats.</p>
+                </div>
+              </div>
+              
+              <div class="form-group full-width">
+                <div class="checkbox-group">
+                  <input type="checkbox" id="additionalBanquetGuests" name="additionalBanquetGuests">
+                  <label for="additionalBanquetGuests">I need additional banquet seats ($45 each)</label>
+                </div>
+              </div>
+              
+              <div class="form-group full-width" id="additional-guests-section" style="display: none;">
+                <label for="additionalGuestCount">Number of Additional Guests</label>
+                <div class="guest-counter">
+                  <button type="button" class="counter-btn" id="decrease-guests">-</button>
+                  <input type="number" id="additionalGuestCount" name="additionalGuestCount" value="0" min="0" max="20" readonly>
+                  <button type="button" class="counter-btn" id="increase-guests">+</button>
+                </div>
+                <div class="guest-cost" id="guest-cost">Additional Cost: $0</div>
+              </div>
+              
+              <div class="form-group full-width">
+                <label for="dietaryRestrictions">Dietary Restrictions or Allergies</label>
+                <textarea id="dietaryRestrictions" name="dietaryRestrictions" rows="3" placeholder="Please list any dietary restrictions, allergies, or special meal requirements for your group..."></textarea>
+              </div>
+            </div>
+          </div>
+
+          <!-- Payment Information -->
+          <div class="form-section payment-info">
+            <div class="section-header">
+              <div class="section-icon">💳</div>
+              <h2>Payment Information</h2>
+              <p>Secure payment processing powered by Stripe</p>
+            </div>
+            
+            <div class="payment-methods">
+              <div class="payment-method active" data-method="card">
+                <div class="method-icon">💳</div>
+                <span>Credit/Debit Card</span>
+              </div>
+              <div class="payment-method" data-method="invoice">
+                <div class="method-icon">📄</div>
+                <span>Invoice (Net 30)</span>
+              </div>
+              <div class="payment-method" data-method="check">
+                <div class="method-icon">📝</div>
+                <span>Check Payment</span>
+              </div>
+            </div>
+            
+            <div class="payment-form" id="card-payment">
+              <div class="form-grid">
+                <div class="form-group full-width">
+                  <label for="card-element">Card Information *</label>
+                  <div id="card-element" class="stripe-element">
+                    <!-- Stripe Elements will create form elements here -->
+                  </div>
+                  <div id="card-errors" role="alert" class="error-message"></div>
+                </div>
+                
+                <div class="form-group">
+                  <label for="billingName">Name on Card *</label>
+                  <input type="text" id="billingName" name="billingName" required>
+                </div>
+                
+                <div class="form-group">
+                  <label for="billingZip">Billing ZIP Code *</label>
+                  <input type="text" id="billingZip" name="billingZip" required>
+                </div>
+              </div>
+              
+              <div class="payment-security">
+                <div class="security-item">
+                  <div class="security-icon">🔒</div>
+                  <span>SSL Encrypted & Secure</span>
+                </div>
+                <div class="security-item">
+                  <div class="security-icon">🛡️</div>
+                  <span>PCI Compliant</span>
+                </div>
+                <div class="security-item">
+                  <div class="security-icon">⚡</div>
+                  <span>Powered by Stripe</span>
+                </div>
+              </div>
+            </div>
+            
+            <div class="payment-form" id="invoice-payment" style="display: none;">
+              <div class="alternative-payment">
+                <div class="payment-instructions">
+                  <h4>Invoice Payment (Net 30)</h4>
+                  <p>We'll send you an invoice with Net 30 payment terms.</p>
+                  <div class="form-group">
+                    <label for="invoiceEmail">Invoice Email Address</label>
+                    <input type="email" id="invoiceEmail" name="invoiceEmail" placeholder="accounting@yourcompany.com">
+                  </div>
+                  <div class="form-group">
+                    <label for="purchaseOrder">Purchase Order Number (Optional)</label>
+                    <input type="text" id="purchaseOrder" name="purchaseOrder" placeholder="PO-2025-001">
+                  </div>
+                </div>
+              </div>
+            </div>
+            
+            <div class="payment-form" id="check-payment" style="display: none;">
+              <div class="alternative-payment">
+                <div class="payment-instructions">
+                  <h4>Check Payment</h4>
+                  <p>Please make checks payable to:</p>
+                  <div class="payment-details">
+                    <strong>The Guruu Foundation, Inc.</strong><br>
+                    [Mailing Address to be provided]
+                  </div>
+                  <p>Please include your organization name and "Golf Tournament Sponsorship" in the memo line.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Terms and Agreements -->
+          <div class="form-section terms-section">
+            <div class="section-header">
+              <div class="section-icon">📋</div>
+              <h2>Terms & Agreements</h2>
+              <p>Please review and accept our partnership terms</p>
+            </div>
+            
+            <div class="terms-grid">
+              <div class="terms-item">
+                <div class="checkbox-group">
+                  <input type="checkbox" id="sponsorshipAgreement" name="sponsorshipAgreement" required>
+                  <label for="sponsorshipAgreement">
+                    <strong>Sponsorship Agreement:</strong> I agree to the <a href="terms.html" target="_blank">sponsorship terms and conditions</a>, understand the benefits included in my package, and authorize The Guruu Foundation to use our organization's name and logo in tournament materials and promotional content.
+                  </label>
+                </div>
+              </div>
+              
+              <div class="terms-item">
+                <div class="checkbox-group">
+                  <input type="checkbox" id="taxDeductible" name="taxDeductible" checked>
+                  <label for="taxDeductible">
+                    <strong>Tax-Deductible Contribution:</strong> I understand that this sponsorship is a tax-deductible contribution to The Guruu Foundation, a qualified 501(c)(3) nonprofit organization (EIN: 33-4378647).
+                  </label>
+                </div>
+              </div>
+              
+              <div class="terms-item">
+                <div class="checkbox-group">
+                  <input type="checkbox" id="marketingUpdates" name="marketingUpdates" checked>
+                  <label for="marketingUpdates">
+                    I would like to receive updates about The Guruu Foundation, future events, and partnership opportunities.
+                  </label>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Sponsorship Summary -->
+          <div class="form-section sponsorship-summary">
+            <div class="section-header">
+              <div class="section-icon">🧾</div>
+              <h2>Sponsorship Summary</h2>
+              <p>Review your partnership investment</p>
+            </div>
+            
+            <div class="summary-card">
+              <div class="summary-item">
+                <span class="item-name" id="summary-package">Legacy Guruu Sponsorship</span>
+                <span class="item-price" id="summary-package-price">$10,000.00</span>
+              </div>
+              
+              <div class="summary-item" id="summary-additional-guests" style="display: none;">
+                <span class="item-name">Additional Banquet Guests (<span id="summary-guest-count">0</span>)</span>
+                <span class="item-price" id="summary-guest-price">$0.00</span>
+              </div>
+              
+              <div class="summary-divider"></div>
+              
+              <div class="summary-total">
+                <span class="total-label">Total Investment</span>
+                <span class="total-price" id="summary-total">$10,000.00</span>
+              </div>
+              
+              <div class="tax-notice">
+                <span class="notice-icon">ℹ️</span>
+                <span>This contribution is tax-deductible. You will receive a receipt and tax documentation for your records.</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Submit Button -->
+          <div class="form-section submit-section">
+            <button type="submit" class="submit-btn" id="submit-btn">
+              <span class="btn-text">Complete Partnership</span>
+              <span class="btn-amount" id="btn-amount">$10,000.00</span>
+              <div class="btn-shine"></div>
+            </button>
+            
+            <div class="submit-security">
+              <div class="security-badges">
+                <div class="security-badge">
+                  <span class="badge-icon">🔒</span>
+                  <span>256-bit SSL</span>
+                </div>
+                <div class="security-badge">
+                  <span class="badge-icon">🛡️</span>
+                  <span>Secure Payment</span>
+                </div>
+                <div class="security-badge">
+                  <span class="badge-icon">✅</span>
+                  <span>Instant Confirmation</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </form>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+      <div class="container">
+        <div class="footer-content">
+          <div class="footer-section">
+            <a href="index.html">
+              <img src="/The Guruu Foundation Wordmark (Mini - Black Background) copy.png" alt="The Guruu Foundation" class="footer-logo">
+            </a>
+            <p>Where mentorship becomes momentum, and purpose finds its path.</p>
+            <div class="social-links">
+              <a href="https://www.facebook.com/TheGuruuFoundation" target="_blank" rel="noopener noreferrer" class="social-link">Facebook</a>
+              <a href="https://www.instagram.com/guruufoundation/" target="_blank" rel="noopener noreferrer" class="social-link">Instagram</a>
+              <a href="https://www.linkedin.com/company/the-guruu-foundation" target="_blank" rel="noopener noreferrer" class="social-link">LinkedIn</a>
+              <a href="https://x.com/GuruuFoundation" target="_blank" rel="noopener noreferrer" class="social-link">X</a>
+            </div>
+          </div>
+          
+          <div class="footer-section">
+            <h4>Tournament</h4>
+            <a href="index.html#about">About</a>
+            <a href="index.html#why-matters">Impact</a>
+            <a href="sponsorship.html">Sponsor</a>
+            <a href="registration.html">Register</a>
+            <a href="waiver.html">Tournament Waiver</a>
+          </div>
+          
+          <div class="footer-section">
+            <h4>Get Involved</h4>
+            <a href="volunteer.html">Get Involved</a>
+            <a href="sponsorship.html#cash-contributions" class="donate-btn">Help Make a Difference</a>
+            <a href="index.html#get-involved">Bring a Friend</a>
+            <a href="index.html#contact">Contact Us</a>
+          </div>
+          
+          <div class="footer-section">
+            <h4>Contact</h4>
+            <p>📧 TheGuruuFoundation@GMail.com</p>
+            <p>📍 Santa Barbara, CA</p>
+            <p>📞 (805) 896.8268</p>
+          </div>
+          
+          <div class="footer-section nonprofit-info">
+            <div class="nonprofit-details">
+              <h4>The Guruu Foundation, Inc.</h4>
+              <p class="nonprofit-status">A registered 501(c)(3) nonprofit organization</p>
+              <p class="nonprofit-ein">EIN: 33-4378647</p>
+              <p class="nonprofit-tax">All contributions are tax-deductible as allowed by law.</p>
+            </div>
+          </div>
+          
+          <div class="footer-section logomark-section">
+            <div class="logomark-container">
+              <img src="/Hi Res Logomark.png" alt="The Guruu Foundation Logomark" class="foundation-logomark-img">
+            </div>
+          </div>
+        </div>
+        
+        <div class="footer-bottom">
+          <div class="footer-bottom-content">
+            <div class="footer-copyright">
+              <p>&copy; 2025 The Guruu Foundation, Inc. All rights reserved.</p>
+              <p>Igniting Greatness, One Partnership at a Time.</p>
+              <div class="footer-links">
+                <a href="privacy-policy.html">Privacy Policy</a>
+                <span class="footer-link-separator">|</span>
+                <a href="terms.html">Terms & Conditions</a>
+                <span class="footer-link-separator">|</span>
+                <a href="waiver.html">Tournament Waiver</a>
+              </div>
+            </div>
+            <div class="footer-branding">
+              <a href="https://Tactiqly.com" target="_blank" rel="noopener noreferrer" class="tactiqly-link">
+                <img src="/Powered by TACTIQLY White Transparent copy.png" alt="Powered by TACTIQLY" class="tactiqly-logo">
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <script src="main.js"></script>
+    <script src="sponsorship-checkout.js"></script>
+  </body>
+</html>
