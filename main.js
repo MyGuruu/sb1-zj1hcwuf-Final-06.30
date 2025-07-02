@@ -2,6 +2,11 @@
 document.addEventListener('DOMContentLoaded', function() {
   // Smooth scrolling for navigation links
   const links = document.querySelectorAll('a[href^="#"]');
+  const navLinks = document.querySelector('.nav-links');
+
+  navToggle.addEventListener('click', () => {
+    navLinks.classList.toggle('active');
+  });
   
   links.forEach(link => {
     link.addEventListener('click', function(e) {
