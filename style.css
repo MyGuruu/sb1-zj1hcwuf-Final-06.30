@@ -387,7 +387,7 @@ p {
   left: 0;
   right: 0;
   bottom: 0;
-  background: url('/Golf Cart Lineup.jpg') center/cover no-repeat;
+  background: url('/GolfCartLineup_hero.jpg') center/cover no-repeat;
   z-index: 1;
   animation: heroZoomOnce 2s ease-out forwards;
 }
@@ -1828,14 +1828,83 @@ p {
   }
 }
 
+.nav {
+  position: relative;
+  z-index: 1002;
+}
+
+.nav-toggle {
+  position: absolute;
+  top: 50%;
+  right: var(--space-md, 16px);
+  transform: translateY(-50%);
+  padding: 10px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  z-index: 1003;
+  display: none;
+}
+
+.nav-toggle .hamburger {
+  width: 25px;
+  height: 2px;
+  background: #2563eb;
+  display: block;
+  position: relative;
+}
+.nav-toggle .hamburger::before,
+.nav-toggle .hamburger::after {
+  content: "";
+  position: absolute;
+  width: 25px;
+  height: 2px;
+  background: #2563eb;
+  left: 0;
+}
+.nav-toggle .hamburger::before {
+  top: -8px;
+}
+.nav-toggle .hamburger::after {
+  top: 8px;
+}
+
+@media (max-width: 768px) {
+  .nav-toggle {
+    display: block;
+  }
+
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 100%;
+    right: 0;
+    left: 0;
+    background-color: white;
+    padding: var(--space-md, 16px);
+    box-shadow: 0 8px 16px rgba(0,0,0,0.1);
+    z-index: 1001;
+    color: #000;
+  }
+
+  .nav-links.active {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+  }
+
+  .nav-links li {
+    margin: 10px 0;
+  }
+}
+
+
 @media (max-width: 768px) {
   .container {
     padding: 0 var(--space-md);
   }
   
-  .nav-links {
-    display: none;
-  }
   
   .logo-wordmark {
     height: 48px;
@@ -1866,11 +1935,23 @@ p {
   .benefits-grid {
     grid-template-columns: 1fr;
   }
+  .hero-container{padding-bottom: 40px;}
+  
+  .hero-title, .hero-subtitle-container{margin-bottom: 10px;}
+  
+  .tagline-container{margin-bottom: 0px;}
+  
+  .subtitle-accent, .tagline-accent-line{display: none;}
+  
+  .footer-section{text-align: center;}
+  
+  .social-links{justify-content: center;}
   
   .hero-date {
     flex-direction: column;
     align-items: center;
     gap: var(--space-xs);
+    margin: 0px;
   }
   
   .floating-circle {
